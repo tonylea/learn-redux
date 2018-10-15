@@ -1,9 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Single extends Component {
+import Photo from './Photo';
+import Comments from './Comments';
+
+const Single = React.createClass({
   render() {
-    return <div className="single-photo">I'm the Single</div>;
+    const index = this.props.posts.findIndex(
+      (post) => post.code === this.props.params.postId
+    );
+    const post = this.props.posts[index];
+
+    return (
+      <div className="single-photo">
+        <Photo index={index} post={post} {...this.props} />
+        <Comments />
+      </div>
+    );
   }
-}
+});
 
 export default Single;
