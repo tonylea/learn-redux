@@ -54,6 +54,7 @@
   "devDependencies": {
     "@types/react": "^16.4.16",
     "@types/react-dom": "^16.0.9",
+    "@types/react-redux": "^6.0.9",
     "@types/react-router": "^4.0.32",
     "@types/react-router-redux": "^5.0.16",
     "expect": "^1.18.0",
